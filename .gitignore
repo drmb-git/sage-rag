@@ -1,0 +1,25 @@
+# API keys - NEVER commit these
+.env
+*.env
+
+# Raw financial documents - sensitive
+data/raw/
+
+# Conda environment
+envs/
+venv/
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# OS junk files
+.DS_Store
+Thumbs.db
+
+# VS Code settings
+.vscode/
