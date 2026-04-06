@@ -1,0 +1,196 @@
+[
+  {
+    "id": 1,
+    "question": "A Meridian client with $4 million in a joint account and $1.5 million across two IRAs wants to know their blended annual management fee rate. Walk through the calculation.",
+    "ground_truth": "All accounts within a household are aggregated for fee tier determination. The total AUM is $5.5 million. The first $1M is charged at 1.00%, the next $2M ($1M-$3M tier) at 0.85%, the next $2M ($3M-$5M tier) at 0.75%, and the remaining $500K ($5M-$10M tier) at 0.60%. This produces total annual fees of $10,000 + $17,000 + $15,000 + $3,000 = $45,000, which represents a blended rate of approximately 0.818% on $5.5 million.",
+    "difficulty": "hard",
+    "sources": [
+      {"document": "Meridian_Wealth_Management_Operations.pdf", "pages": [2]}
+    ]
+  },
+  {
+    "id": 2,
+    "question": "A transaction monitoring alert has been sitting in the queue for 26 hours without review. According to Meridian's AML procedures, what compliance metric has been breached, and at what point would this situation trigger an escalation to the Board?",
+    "ground_truth": "The alert has breached the Level 1 triage disposition target of completing review within 24 hours of generation, with a target compliance rate of >90%. If the alert disposition rate falls below 80%, it triggers an escalation. Alert volume and disposition statistics are reported to the Board quarterly as part of the BSA/AML Officer's comprehensive report. However, the Board receives immediate notification only for specific events like SARs involving employees, law enforcement inquiries, critical audit findings, or potential regulatory enforcement actions -- not for individual alert delays.",
+    "difficulty": "medium",
+    "sources": [
+      {"document": "Meridian_AML_KYC_Compliance_Manual.pdf", "pages": [4, 5, 9]}
+    ]
+  },
+  {
+    "id": 3,
+    "question": "A self-employed mortgage applicant shows $180,000 net business income in 2024 and $140,000 in 2023, after adding back depreciation. What income figure does Meridian use for qualification, and why?",
+    "ground_truth": "Since the income trend is declining but the decline from $180,000 to $140,000 year-over-year is not more than 20% (the decline is approximately 22.2% -- actually $180K to $140K is a decline of $40K/$180K = 22.2% which exceeds 20%), the underwriter would use only the most recent year's income of $140,000. Under Meridian's self-employed borrower analysis, if the trend is declining by more than 20% year-over-year, only the most recent year's income is used rather than the two-year average.",
+    "difficulty": "hard",
+    "sources": [
+      {"document": "Meridian_Mortgage_Underwriting_Standards.docx", "pages": [4]}
+    ]
+  },
+  {
+    "id": 4,
+    "question": "Meridian's CRE portfolio experienced three downgrades in Q4 2025. What was the total exposure of these downgrades, and what specific geographic concentration is approaching its internal limit?",
+    "ground_truth": "The three new CRE downgrades to Substandard status in Q4 2025 totaled $42.3 million in exposure, linked to increased vacancy rates in the suburban office market. The Atlanta MSA geographic concentration is at 33.6%, approaching the 40% internal limit. A soft cap on new CRE originations in the Atlanta MSA has been implemented effective Q1 2026, limiting new commitments to $50 million per quarter until concentration drops below 30%.",
+    "difficulty": "medium",
+    "sources": [
+      {"document": "Meridian_Q4_2025_Financial_Risk_Report.docx", "pages": [2, 3]}
+    ]
+  },
+  {
+    "id": 5,
+    "question": "An investment advisor at Meridian wants to purchase an ETF with a 0.45% expense ratio for a client's portfolio. Under what conditions would this be allowed, and what approval is needed if the fund is not on the standard list?",
+    "ground_truth": "An ETF with a 0.45% expense ratio would need to be on the Approved Product List (APL) as a Tier 2 (Approved) product, since Tier 2 allows expense ratios up to 0.65% for factor-based and actively managed funds with demonstrated alpha persistence over rolling 5-year periods. It would not qualify as Tier 1 (Preferred), which caps expense ratios at 0.15%. If the fund is not on the APL, the advisor must submit a Non-Standard Investment Request (NSIR) form approved by both the CIO and CCO. NSIRs are reviewed within 10 business days and expire after 90 days if unused.",
+    "difficulty": "medium",
+    "sources": [
+      {"document": "Meridian_Investment_Portfolio_Guidelines.pdf", "pages": [3]}
+    ]
+  },
+  {
+    "id": 6,
+    "question": "A Meridian branch teller processes three cash deposits for the same customer totaling $9,200 over two consecutive business days. Which automated monitoring scenario would flag this, and what is the specific threshold?",
+    "ground_truth": "This would trigger Scenario SCN-001 (Structuring detection), which flags 3 or more cash transactions totaling over $8,000 within 2 business days. The three deposits totaling $9,200 across two business days meet both the count threshold (3+ transactions) and the dollar threshold (>$8,000). This scenario is designed to detect potential structuring, where transactions are deliberately kept below the $10,000 CTR filing threshold.",
+    "difficulty": "medium",
+    "sources": [
+      {"document": "Meridian_AML_KYC_Compliance_Manual.pdf", "pages": [4]}
+    ]
+  },
+  {
+    "id": 7,
+    "question": "A borrower with a 710 credit score wants to buy a second home with a conventional 30-year fixed mortgage. What is the maximum LTV allowed, and what rate adjustment applies to their credit score tier?",
+    "ground_truth": "For a second home with a conventional mortgage, the maximum LTV is 90%. With a credit score of 710 (which falls in the 700-719 tier), the rate adjustment is +50 basis points above the best pricing tier. The minimum credit score for a conventional loan is 620, so the borrower qualifies on credit score. The borrower would need at least a 10% down payment.",
+    "difficulty": "medium",
+    "sources": [
+      {"document": "Meridian_Mortgage_Underwriting_Standards.docx", "pages": [2, 5]}
+    ]
+  },
+  {
+    "id": 8,
+    "question": "Under the severely adverse stress test scenario, which capital ratio comes closest to breaching its regulatory minimum, and by how much?",
+    "ground_truth": "Under the severely adverse scenario, the Tier 1 Capital Ratio falls to 8.1%, which is only 10 basis points above the well-capitalized threshold of 8.0%. The Total Capital Ratio falls to 9.8%, which is 20 basis points below the internal limit of 13.0% but still above the regulatory well-capitalized threshold of 10.0% (actually it's below 10.0% by 20 basis points). The CET1 ratio minimum of 7.2% provides a buffer of 270 basis points above the 4.5% regulatory minimum. The Tier 1 Leverage ratio of 5.4% is 40 basis points above the 5.0% well-capitalized threshold. So the Total Capital Ratio at 9.8% vs the 10.0% well-capitalized threshold is the closest breach at just 20 basis points below.",
+    "difficulty": "hard",
+    "sources": [
+      {"document": "Meridian_Q4_2025_Financial_Risk_Report.docx", "pages": [6]}
+    ]
+  },
+  {
+    "id": 9,
+    "question": "A Family Office client's primary advisor suddenly resigns. Describe the succession process and the specific meeting frequency this client should expect going forward.",
+    "ground_truth": "Each client relationship has a designated backup advisor documented in the CRM. When the primary advisor departs, the backup advisor assumes responsibility within 1 business day. For Family Office clients specifically, a formal transition plan is reviewed annually with the client. Going forward, the Family Office client should expect monthly in-person meetings (which are required, not optional), along with the full suite of reporting including monthly portfolio performance reports, quarterly investment reviews, and annual financial plan progress reports.",
+    "difficulty": "medium",
+    "sources": [
+      {"document": "Meridian_Wealth_Management_Operations.pdf", "pages": [9, 5]}
+    ]
+  },
+  {
+    "id": 10,
+    "question": "A Meridian employee's AML training deadline was 20 days ago and they still haven't completed it. What consequences have already been triggered, and what happens next if they continue to delay?",
+    "ground_truth": "At 15-30 days overdue, the employee receives a written warning placed in their personnel file, and their system access is restricted to supervised-only mode. Prior to this, at 1-14 days overdue, they would have received email reminders from compliance and notification to their direct supervisor. If they continue past 31 days overdue, their client-facing responsibilities will be suspended, they must attend a mandatory meeting with the CCO, and continued non-compliance may result in termination.",
+    "difficulty": "medium",
+    "sources": [
+      {"document": "Meridian_AML_KYC_Compliance_Manual.pdf", "pages": [7]}
+    ]
+  },
+  {
+    "id": 11,
+    "question": "A portfolio manager notices that a client's emerging markets allocation has drifted to 14% in their Moderate (R5-R6) portfolio. Is this a compliance violation? What happens next?",
+    "ground_truth": "Yes, this is a compliance violation. The Moderate (R5-R6) model portfolio targets 5% in Emerging Markets with a permissible range of 2-8%. At 14%, the allocation is well beyond the permissible range. This would be classified as a Level 2 (Moderate) violation -- drift beyond the permissible range. It requires a written explanation from the portfolio manager and CCO review within 10 business days. The Portfolio Management System generates a daily drift report at 5:30 PM ET identifying portfolios outside permissible ranges, and the assigned portfolio manager must review by 9:00 AM ET the following business day.",
+    "difficulty": "hard",
+    "sources": [
+      {"document": "Meridian_Investment_Portfolio_Guidelines.pdf", "pages": [3, 4, 8]}
+    ]
+  },
+  {
+    "id": 12,
+    "question": "An appraised value for a $1.2 million property comes in 12% below the AVM estimate. What additional steps are triggered by this discrepancy, and how many independent appraisals were required for this loan amount in the first place?",
+    "ground_truth": "For a loan amount of $1.2 million (which falls in the $1,000,001-$2,000,000 range), two independent appraisals are required from the outset. The 12% variance between the appraised value and AVM exceeds the 15% threshold -- actually 12% does not exceed 15%, so a field review would NOT be automatically triggered by the AVM comparison alone. However, since the loan is in the $1M+ range requiring two appraisals, both appraisals must go through the standard review process including USPAP compliance check and comparable analysis. If either appraisal has cumulative net adjustments exceeding 15% or gross adjustments exceeding 25% to any single comparable, a second review by the Chief Appraiser is required.",
+    "difficulty": "hard",
+    "sources": [
+      {"document": "Meridian_Mortgage_Underwriting_Standards.docx", "pages": [6]}
+    ]
+  },
+  {
+    "id": 13,
+    "question": "What is the total contingency liquidity available to Meridian, and what percentage of total assets does it represent? How does this compare to the internal minimum?",
+    "ground_truth": "Meridian's total contingency liquidity is $6.759 billion (comprising $2.237B net FHLB capacity, $1.45B Fed Discount Window, $1.876B unpledged securities, $500M unsecured fed funds lines, and $696M brokered CD capacity). This represents 42.0% of total assets ($18.7 billion). The internal minimum requirement is 25% of total assets, giving Meridian a comfortable buffer of 17 percentage points above the minimum.",
+    "difficulty": "medium",
+    "sources": [
+      {"document": "Meridian_Q4_2025_Financial_Risk_Report.docx", "pages": [4]}
+    ]
+  },
+  {
+    "id": 14,
+    "question": "A potential customer who is a former deputy minister of a foreign country wants to open a wealth management account. Describe every additional requirement that applies to this customer beyond standard onboarding.",
+    "ground_truth": "As a former senior government official (deputy minister level or above), this person is classified as a Politically Exposed Person (PEP). PEP accounts automatically receive a High risk rating and require: (1) Enhanced Due Diligence (EDD) at account opening, (2) approval by both the BSA/AML Officer and the Head of the relevant business line (Wealth Management), (3) source of wealth documentation, (4) semi-annual relationship review (instead of every 12 months for standard High-risk customers), and (5) transaction monitoring at 50% of standard thresholds. Additionally, as a High-risk customer, EDD review must occur every 12 months, and enhanced (lower) transaction monitoring thresholds apply.",
+    "difficulty": "medium",
+    "sources": [
+      {"document": "Meridian_AML_KYC_Compliance_Manual.pdf", "pages": [3]}
+    ]
+  },
+  {
+    "id": 15,
+    "question": "A trade error is discovered that cost a client $35,000. Walk through the complete resolution process including every notification requirement and timeline.",
+    "ground_truth": "The trade error must be reported immediately to the Head Trader and documented on Form WM-TE-100 within 4 hours of discovery. The erroneous position is isolated in the Firm's error account within 1 business day. Financial impact is calculated, and the error is corrected with the client account made whole within 3 business days (since the error resulted in a loss, Meridian absorbs it and restores the client's position). A root cause analysis must be completed within 10 business days and submitted to the CCO. The client must be notified within 5 business days of resolution. Since the loss exceeds $10,000, CEO notification is required. Since the loss does not exceed $50,000, Board notification is not required.",
+    "difficulty": "hard",
+    "sources": [
+      {"document": "Meridian_Wealth_Management_Operations.pdf", "pages": [4, 5]}
+    ]
+  },
+  {
+    "id": 16,
+    "question": "A Meridian advisor has a client score of 65% on the quarterly scorecard for the second consecutive quarter. What happens, and if the situation doesn't improve, what is the ultimate consequence?",
+    "ground_truth": "Advisors scoring below 70% on the composite scorecard for two consecutive quarters are placed on a Performance Improvement Plan (PIP). The PIP lasts 90 days with monthly check-ins. If the advisor fails to improve to 70% during the PIP period, it may result in reassignment or termination. The scorecard evaluates Revenue Growth (30%), Client Acquisition (20%), Client Retention (20%), Compliance (15%), and Professional Development (15%).",
+    "difficulty": "medium",
+    "sources": [
+      {"document": "Meridian_Wealth_Management_Operations.pdf", "pages": [11]}
+    ]
+  },
+  {
+    "id": 17,
+    "question": "Across all of Meridian's policies, what are the different timelines and deadlines for reporting, escalating, or resolving suspicious or problematic events? Compare the timelines for SAR filing, trade error resolution, complaint handling, OFAC match review, operational loss reporting, and compliance violation escalation.",
+    "ground_truth": "SAR filing: within 30 calendar days of initial detection (60 days if no suspect identified); continuing activity review every 90 days. OFAC match review: within 2 hours during business hours, or by 10:00 AM next business day for after-hours matches; blocked property reported to OFAC within 10 business days. Trade error: reported within 4 hours of discovery, position isolated within 1 business day, corrected within 3 business days, root cause analysis within 10 business days, client notification within 5 business days. Complaint handling: Level 1 resolved in 5 business days, Level 2 in 15, Level 3 in 30, Level 4 per legal counsel; initial response for Level 3 within 4 hours, Level 4 within 1 hour. Compliance violations: Level 1 (minor drift) self-corrects in 5 business days; Level 2 requires CCO review within 10 business days; Level 3 escalated to CEO. AML alert triage: within 24 hours; Level 2 investigation within 5 business days; SAR decision within 3 business days of Level 2 completion.",
+    "difficulty": "hard",
+    "sources": [
+      {"document": "Meridian_AML_KYC_Compliance_Manual.pdf", "pages": [4, 5, 6]},
+      {"document": "Meridian_Wealth_Management_Operations.pdf", "pages": [4, 5, 7]},
+      {"document": "Meridian_Investment_Portfolio_Guidelines.pdf", "pages": [8]}
+    ]
+  },
+  {
+    "id": 18,
+    "question": "What are all the different committees, governance bodies, and oversight groups mentioned across Meridian's policies, and what does each one do?",
+    "ground_truth": "Investment Committee: meets monthly (first Wednesday), chaired by CIO, reviews investment guidelines, approves APL changes and policy amendments, requires 4-member quorum. Mortgage Lending Committee: reviews underwriting standards quarterly, chaired by CLO, receives monthly defect rate reports. Risk Committee: meets monthly per the 2026 calendar, reviews enterprise risk metrics, approves risk appetite, oversees stress testing. Asset-Liability Committee (ALCO): manages interest rate risk using EaR and EVE approaches. Board of Directors: receives quarterly AML reports, annual program reviews, approves AML program. Wealth Management Executive Committee: approves operations manual, reviews complaint appeals, receives quarterly complaint summaries and KPI reports. Trading Oversight Committee: reviews execution quality monthly. Credit Risk Committee: implemented Atlanta MSA soft cap for CRE. CDS Committee (referenced as Diversion Prevention in AML context): BSA/AML Officer and team handle SAR decisions. Model Risk Management team: developing AI model validation frameworks.",
+    "difficulty": "hard",
+    "sources": [
+      {"document": "Meridian_Investment_Portfolio_Guidelines.pdf", "pages": [1, 8]},
+      {"document": "Meridian_AML_KYC_Compliance_Manual.pdf", "pages": [1, 9]},
+      {"document": "Meridian_Mortgage_Underwriting_Standards.docx", "pages": [1, 8]},
+      {"document": "Meridian_Q4_2025_Financial_Risk_Report.docx", "pages": [1, 3, 9]},
+      {"document": "Meridian_Wealth_Management_Operations.pdf", "pages": [7, 11]}
+    ]
+  },
+  {
+    "id": 19,
+    "question": "What are all the specific numeric compliance targets, thresholds, and limits specified across Meridian's policies? List as many specific percentages, rates, dollar amounts, and scores as you can find.",
+    "ground_truth": "Key numeric targets across policies: Hand hygiene/AML training completion: 100% target, 95% minimum acceptable. Alert disposition within 24 hours: >90% target. SAR decision within 3 days: >95%. False positive rate: <75%. CET1 ratio internal limit: >10.0%. Total Capital ratio: >13.0%. NPL ratio limit: <2.0%. NCO ratio limit: <0.75%. LCR: >120%. Loan-to-deposit: <95%. EVE sensitivity: >-8.0%. ROE target: >8.0%. Efficiency ratio: <65%. Operational loss/revenue: <1.0%. Mortgage defect rate target: <5%, critical <0.5%. QC review sample: 10% of funded loans. Trade error rate: <0.02% (2 per 10,000). Client retention: >95%. NPS: >60. Complaint resolution within target: >90%. Portal adoption: >80% target. Onboarding within 30 days: >95%. Complaint rate: <5 per 1,000 households. Phishing click rate: <5%. MTTD: <30 minutes. MTTR: <4 hours. Critical patching SLA: >95%. Identity verification minimum score: 75/100 (auto-decline below 50). Performance dispersion limit: 150 basis points. Soft dollar cap: $150,000/year. PMI cancellation at 80% LTV, automatic at 78%. Pricing disparity investigation threshold: 25 basis points. Concentrated position: >10% triggers action, must reduce within 36 months.",
+    "difficulty": "hard",
+    "sources": [
+      {"document": "Meridian_Investment_Portfolio_Guidelines.pdf", "pages": [4, 5, 7, 8]},
+      {"document": "Meridian_AML_KYC_Compliance_Manual.pdf", "pages": [2, 4, 7]},
+      {"document": "Meridian_Mortgage_Underwriting_Standards.docx", "pages": [6, 8, 9]},
+      {"document": "Meridian_Q4_2025_Financial_Risk_Report.docx", "pages": [1, 5, 8]},
+      {"document": "Meridian_Wealth_Management_Operations.pdf", "pages": [3, 7, 11]}
+    ]
+  },
+  {
+    "id": 20,
+    "question": "What are all the different automated monitoring, surveillance, and screening systems described across Meridian's policies? Include systems for transaction monitoring, portfolio compliance, trade surveillance, cybersecurity, and customer screening.",
+    "ground_truth": "Meridian uses multiple automated systems: (1) Actimize NICE AML platform for transaction monitoring with 10 predefined scenarios (SCN-001 through SCN-010) covering structuring, rapid fund movement, high-risk geography, unusual cash activity, etc. (2) Real-time OFAC/SDN screening at account opening, wire transfers, ACH, and daily batch screening of entire customer base. (3) Dow Jones Risk & Compliance database for daily adverse media/negative news screening (SCN-009). (4) Portfolio Management System (PMS) daily automated guideline adherence checks and drift reports generated at 5:30 PM ET. (5) LexisNexis Risk Solutions for non-documentary identity verification with scoring. (6) Orion portfolio management for real-time portfolio accounting and billing. (7) ComplySci for personal trading pre-clearance and compliance monitoring. (8) Smarsh for email/social media/text message archival and supervisory review. (9) Automated Valuation Model (AVM) for appraisal comparison. (10) Post-trade reconciliation system for trade error detection. (11) Cybersecurity monitoring with MTTD of 18 minutes and MTTR of 2.4 hours, endpoint protection at 99.8% coverage. (12) Compliance training LMS with automated reminders at 14 and 7 days before deadline.",
+    "difficulty": "hard",
+    "sources": [
+      {"document": "Meridian_AML_KYC_Compliance_Manual.pdf", "pages": [2, 4, 6]},
+      {"document": "Meridian_Investment_Portfolio_Guidelines.pdf", "pages": [4, 8]},
+      {"document": "Meridian_Mortgage_Underwriting_Standards.docx", "pages": [6]},
+      {"document": "Meridian_Wealth_Management_Operations.pdf", "pages": [4, 8]},
+      {"document": "Meridian_Q4_2025_Financial_Risk_Report.docx", "pages": [5]}
+    ]
+  }
+]
